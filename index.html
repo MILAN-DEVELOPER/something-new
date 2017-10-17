@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>$SCOPE ++</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="JQuery.js"></script> 
+    <script src="main.js"></script> 
+    
+</head>
+ <body>
+<!-- count++-->
+        <div ng-controller="myCtrl">
+            <button ng-click="myFunction()">Click Me!</button>
+            <p>{{ count }}</p>
+        </div>
+        
+<!-- dropdown menu-->
+ <div ng-controller="myCtrl2" > 
+      <select   ng-model="myVar">
+        <option  value="cat">cat</option> 
+        <option  value="dog">dog</option>  
+        <option  value="horse">horse</option>   
+      </select> 
+     
+   <div ng-switch="myVar">
+    <div ng-switch-when="cat">
+            <h1>CAT</h1>
+    <p>cat is very small animal</p>
+    </div>
+    <div ng-switch-when="dog">
+            <h1>DOG</h1>
+      <p>dog is bigger than cat</p>
+    </div> 
+    <div ng-switch-when="horse">
+            <h1>HORSE</h1>
+      <p>horse is bigger than cat and dog</p>
+     </div>
+  </div>
+     <br><br>
+
+<!-- checkbox-->
+<div ng-controller="myCtrl3">
+   <form>    
+     <input type="radio" ng-model="myVars" value="car"> car  
+     <input type="radio" ng-model="myVars" value="bicycle">bicycle 
+     <input type="radio" ng-model="myVars" value="track"> track   
+   </form>
+    <div ng-switch="myVars">
+            <div ng-switch-when="car">
+                    <h1>CAR</h1>
+              <p>car is very small animal</p>
+            </div>
+            <div ng-switch-when="bicycle">
+                    <h1>BICYCLE</h1>
+              <p>dog is bigger than cat</p>
+            </div> 
+            <div ng-switch-when="track">
+                    <h1>TRACK</h1>
+              <p>horse is bigger than cat and dog</p>
+            </div>
+    </div>
+</div>
+
+ </body>
+</html>
